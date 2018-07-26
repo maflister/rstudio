@@ -6,7 +6,7 @@ From: mcw-rcc/r-base:3.5.0
 
 %labels
     Maintainer Matthew Flister
-    Version 07.02.18
+    Version 07.26.18
     Rstudio_Version 1.1.442
     R_Version 3.5.0
 
