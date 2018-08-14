@@ -6,15 +6,16 @@ From: mcw-rcc/r-base:3.5.0
 
 %labels
     Maintainer Matthew Flister
-    Version 07.26.18
-    Rstudio_Version 1.1.442
+    Version 08.14.18
+    Rstudio_Version 1.1.456
     R_Version 3.5.0
 
 %environment
     export QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb
+    export R_LIBS=/extR/library
 
 %post
-    mkdir -p /scratch/global /scratch/local /rcc/stor1/refdata /rcc/stor1/projects /rcc/stor1/depts
+    mkdir -p /scratch/global /scratch/local /rcc/stor1/refdata /rcc/stor1/projects /rcc/stor1/depts /extR/library
     apt-get update
     apt-get -y install \
         software-properties-common \
@@ -37,7 +38,7 @@ From: mcw-rcc/r-base:3.5.0
         wget \
         gdebi-core
     apt-get clean
-    wget https://download1.rstudio.org/rstudio-xenial-1.1.442-amd64.deb
-    gdebi --n rstudio-xenial-1.1.442-amd64.deb
-    rm rstudio-xenial-1.1.442-amd64.deb
+    wget https://download1.rstudio.org/rstudio-xenial-1.1.456-amd64.deb
+    gdebi --n rstudio-xenial-1.1.456-amd64.deb
+    rm rstudio-xenial-1.1.456-amd64.deb
 
