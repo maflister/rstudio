@@ -33,6 +33,7 @@ From: mcw-rcc/r-base:3.5.0
         libvorbis0a \
         libvorbisenc2 \
         libxslt-dev \
+        libssl-dev \
         locales \
         texlive-fonts-extra \
         wget \
