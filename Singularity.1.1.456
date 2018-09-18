@@ -44,6 +44,7 @@ From: mcw-rcc/r-base:3.5.1
     gdebi --n rstudio-xenial-1.1.456-amd64.deb
     rm rstudio-xenial-1.1.456-amd64.deb
     echo "R_LIBS=/extR/library" > /usr/local/lib/R/etc/Renviron.site
-    cd /lib/x86_64-linux-gnu
-    ln -s libssl.so.1.0.0 libssl.so.10
-    ln -s libcrypto.so.1.0.0 libcrypto.so.10
+    #cd /lib/x86_64-linux-gnu
+    #ln -s libssl.so.1.0.0 libssl.so.10
+    #ln -s libcrypto.so.1.0.0 libcrypto.so.10
+    echo install.packages\(\"openssl\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
