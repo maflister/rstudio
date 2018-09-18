@@ -15,6 +15,7 @@ From: mcw-rcc/r-base:3.5.1
     export R_LIBS=/extR/library
 
 %post
+    mkdir -p /extR/library
     apt-get update
     apt-get -y install \
         software-properties-common \
