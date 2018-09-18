@@ -44,4 +44,5 @@ From: mcw-rcc/r-base:3.5.1
     gdebi --n rstudio-xenial-1.1.456-amd64.deb
     rm rstudio-xenial-1.1.456-amd64.deb
     echo "R_LIBS=/extR/library" > /usr/local/lib/R/etc/Renviron.site
-    echo install.packages\(\"openssl\"\, repos\=\'https://cloud.r-project.org\'\, lib\=\'/usr/local/lib/R/library\'\) | R --slave
+    R -e 'install.packages("openssl", lib="/usr/local/lib/R/library")'
+    R -e 'source("https://bioconductor.org/biocLite.R"); biocLite("rtracklayer", lib="/usr/local/lib/R/library")'
