@@ -12,7 +12,7 @@ From: mcw-rcc/r-base:3.5.1
 
 %environment
     export QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb
-    export R_LIBS=/extR/library
+    export R_LIBS=$R_LIBS:/extR/library
 
 %post
     mkdir -p /extR/library
@@ -43,6 +43,4 @@ From: mcw-rcc/r-base:3.5.1
     wget https://download1.rstudio.org/rstudio-xenial-1.1.456-amd64.deb
     gdebi --n rstudio-xenial-1.1.456-amd64.deb
     rm rstudio-xenial-1.1.456-amd64.deb
-    echo "R_LIBS=/extR/library" > /usr/local/lib/R/etc/Renviron.site
-    R -e 'install.packages("openssl", lib="/usr/local/lib/R/library")'
-    R -e 'source("https://bioconductor.org/biocLite.R"); biocLite("rtracklayer", lib="/usr/local/lib/R/library")'
+    R -e 'source("https://bioconductor.org/biocLite.R"); biocLite("rtracklayer", lib="/usr/local/lib/R/library"); biocLite("openssl", lib="/usr/local/lib/R/library")'
