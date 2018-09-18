@@ -33,18 +33,14 @@ From: mcw-rcc/r-base:3.5.1
         libvorbis0a \
         libvorbisenc2 \
         libxslt-dev \
-        libssl-dev \
         locales \
         texlive-fonts-extra \
         wget \
         libssl1.0.0 \
-        libssl-dev \
         gdebi-core
     apt-get clean
     ln -s /lib/x86_64-linux-gnu/libssl.so.1.0.0 /lib/x86_64-linux-gnu/libssl.so.10
     ln -s /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 /lib/x86_64-linux-gnu/libcrypto.so.10
-    export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-    ldconfig
     wget https://download1.rstudio.org/rstudio-xenial-1.1.456-amd64.deb
     gdebi --n rstudio-xenial-1.1.456-amd64.deb
     rm rstudio-xenial-1.1.456-amd64.deb
