@@ -43,7 +43,7 @@ From: mcw-rcc/r-base:3.5.1
     apt-get clean
     ln -s /lib/x86_64-linux-gnu/libssl.so.1.0.0 /lib/x86_64-linux-gnu/libssl.so.10
     ln -s /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 /lib/x86_64-linux-gnu/libcrypto.so.10
-    ldconfg
+    /sbin/ldconfg
     wget https://download1.rstudio.org/rstudio-xenial-1.1.456-amd64.deb
     gdebi --n rstudio-xenial-1.1.456-amd64.deb
     rm rstudio-xenial-1.1.456-amd64.deb
